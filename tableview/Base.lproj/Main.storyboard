@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Jh-TP-Zvx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="zDd-59-JT7">
+            <objects>
+                <tableViewController id="8MA-IY-QWI" customClass="TableViewController" customModule="tableview" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="miD-Fj-SAJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vXj-sd-l9f">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vXj-sd-l9f" id="vii-HQ-WdX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8MA-IY-QWI" id="Euj-CC-Iqc"/>
+                            <outlet property="delegate" destination="8MA-IY-QWI" id="Qbn-IQ-Epy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OYe-me-ZBv">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Add" id="Dv2-BH-HIV">
+                                <connections>
+                                    <action selector="tapAdd:" destination="8MA-IY-QWI" id="eqB-Rc-EJb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Clear" id="MWM-Ce-OW4">
+                                <connections>
+                                    <action selector="tapClear:" destination="8MA-IY-QWI" id="xf2-lD-1va"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Stop" id="A0j-wo-aoc">
+                                <connections>
+                                    <action selector="tapStop:" destination="8MA-IY-QWI" id="MuP-RF-NxL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Auto" id="73U-ff-lCD">
+                                <connections>
+                                    <action selector="tapAuto:" destination="8MA-IY-QWI" id="AM6-am-yqu"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXL-LI-OO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="22"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qLf-9Z-ds9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Jh-TP-Zvx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hq7-2n-xgM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8MA-IY-QWI" kind="relationship" relationship="rootViewController" id="S31-NG-lw5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S44-Xg-xyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.39999999999998" y="22.488755622188908"/>
+        </scene>
+    </scenes>
+</document>
